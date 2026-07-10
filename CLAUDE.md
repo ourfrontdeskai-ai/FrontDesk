@@ -18,7 +18,7 @@ Known free-tier ceilings to respect:
 | Canva | 1 basic Brand Kit, limited premium elements on free plan | Build with free-tier assets only. |
 | Gmail / Google Calendar / Google Drive | Standard free Google account limits | Generous at current volume, low risk. |
 | GitHub | Free tier | No concern at current repo size. |
-| Zapier | 100 tasks/month, single-step Zaps only on free plan | Currently parked — do not enable until user asks. |
+| Zapier | 100 tasks/month, single-step Zaps only on free plan | Enabled 2026-07-10 for LinkedIn posting only (`share` and `create_company_update` actions), per explicit user approval — awaiting user's LinkedIn OAuth connection before first use. Do not enable other apps on Zapier without separate approval. |
 | n8n | Free if self-hosted; limited executions on n8n Cloud trial | Currently parked — do not enable until user asks. |
 | HyperFrames (HeyGen) | Limited trial render credits | Not started yet; check limits before first use. |
 | Zoom for Claude | N/A | Permanently excluded per user instruction — never connect/use. |
