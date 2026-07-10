@@ -27,3 +27,30 @@ When any automation step would exceed a free-tier cap, stop and flag it to the
 user instead of silently upgrading, degrading functionality, or pushing them
 to pay. Only revisit these limits when the user confirms revenue has started
 and gives explicit approval to upgrade a specific tool.
+
+## Weekly execution report
+Every week, produce a report covering everything executed that week across
+the automation system: leads sourced, CRM changes, campaigns/content drafted,
+Calendly bookings, PR/dev activity, KPI snapshot vs. targets, and any
+free-tier or blocker flags raised. This is delivered via the "Weekly
+Automation Report" Routine (self-bound, fires into the originating session).
+If asked to change cadence or delivery method, update that Routine rather
+than relying on memory of this instruction alone.
+
+## Recurring automation Routines
+Routines exist for well-defined, low-risk, already-proven steps only — per
+the "automation execution model" rule, nothing client-facing or judgment-
+requiring is run as an unattended Routine. Current Routines:
+- **Weekly Automation Report** — weekly summary per above.
+- **Daily Ops Check** — daily snapshot of Apollo credit usage, MailerLite
+  subscriber count/campaign status, Calendly bookings, and HubSpot CRM
+  count, flagging anything approaching a free-tier cap.
+Do not add an hourly Routine unless there is a specific, well-defined,
+low-risk task that actually needs hourly cadence — an empty recurring job
+is not automation.
+
+## Subagents for the OurFrontDeskAI automation system
+Specialized subagents live in `.claude/agents/` for delegating domain-specific
+work within a session (lead sourcing, CRM ops, content drafting, reporting).
+They do not run unattended on their own — a session or Routine invokes them.
+See each file's frontmatter for scope and tool access.
