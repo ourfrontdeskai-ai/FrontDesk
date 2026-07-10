@@ -33,22 +33,34 @@ and gives explicit approval to upgrade a specific tool.
 Every week, produce a report covering everything executed that week across
 the automation system: leads sourced, CRM changes, campaigns/content drafted,
 Calendly bookings, PR/dev activity, KPI snapshot vs. targets, and any
-free-tier or blocker flags raised. This is delivered via the "Weekly
-Automation Report" Routine (self-bound, fires into the originating session).
-If asked to change cadence or delivery method, update that Routine rather
-than relying on memory of this instruction alone.
+free-tier or blocker flags raised. The finished report must be saved to
+Google Drive as a native Google Doc (via the Google Drive connector, not just
+posted in-conversation), then the user is notified that it's ready for
+checking. This is delivered via the "Weekly Automation Report" Routine
+(self-bound, fires into the originating session). If asked to change cadence
+or delivery method, update that Routine rather than relying on memory of
+this instruction alone.
 
 ## Recurring automation Routines
 Routines exist for well-defined, low-risk, already-proven steps only — per
 the "automation execution model" rule, nothing client-facing or judgment-
 requiring is run as an unattended Routine. Current Routines:
-- **Weekly Automation Report** — weekly summary per above.
+- **Weekly Automation Report** — weekly summary per above, saved to Google
+  Drive as a Google Doc, user notified when ready.
 - **Daily Ops Check** — daily snapshot of Apollo credit usage, MailerLite
   subscriber count/campaign status, Calendly bookings, and HubSpot CRM
   count, flagging anything approaching a free-tier cap.
 Do not add an hourly Routine unless there is a specific, well-defined,
 low-risk task that actually needs hourly cadence — an empty recurring job
 is not automation.
+
+**Exception (decided 2026-07-10):** the user explicitly overrode the
+"nothing client-facing unattended" default for the 7-Day LinkedIn Editorial
+Campaign — scheduled Routines may auto-post each day's LinkedIn content live,
+without a per-post approval gate, per that explicit instruction. This is a
+one-time override for that specific campaign, not a standing policy change —
+future LinkedIn/social content batches should default back to the
+approve-before-posting model unless the user explicitly overrides again.
 
 ## Subagents for the OurFrontDeskAI automation system
 Specialized subagents live in `.claude/agents/` for delegating domain-specific
