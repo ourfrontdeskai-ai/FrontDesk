@@ -22,6 +22,7 @@ Known free-tier ceilings to respect:
 | n8n | Free if self-hosted; limited executions on n8n Cloud trial | Currently parked — do not enable until user asks. |
 | HyperFrames (HeyGen) | Limited trial render credits | Not started yet; check limits before first use. |
 | Zoom for Claude | N/A | Permanently excluded per user instruction — never connect/use. |
+| Stripe | N/A | Payment processing is already automated directly on ourfrontdeskai.com (outside Claude's connected tools) — not a gap to fix, no connector needed here. |
 
 When any automation step would exceed a free-tier cap, stop and flag it to the
 user instead of silently upgrading, degrading functionality, or pushing them
