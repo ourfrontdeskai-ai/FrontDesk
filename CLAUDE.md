@@ -10,10 +10,10 @@ Known free-tier ceilings to respect:
 
 | Tool | Free-tier limit | Notes |
 |---|---|---|
-| MailerLite | ~1,000 subscribers / ~12,000 emails per month | Pace list growth into "Cold Outreach Leads" group accordingly. |
+| MailerLite | ~1,000 subscribers / ~12,000 emails per month | **Suspended 2026-07-10** — account flagged "not active," scheduling disabled, after a crypto-related campaign (unrelated "SableAssent Coin Corporation" content) was sent from this account. Do not attempt to send anything from this account until the user confirms it's reinstated with MailerLite support. Pace list growth into "Cold Outreach Leads" group accordingly once restored. |
 | Calendly | 1 active event type, no group-kind events | Group event types (e.g. phone-call "Free 30 min Demo") fail to activate on free plan — use solo-type events only until upgraded. |
 | Apollo.io | ~80 lead credits / ~160 direct-dial / ~5,000 AI credits / 0 export credits per cycle | Avoid bulk pulls and CSV exports (export credits are at zero). |
-| Brevo | 300 emails/day, unlimited contacts | Use as backup/transactional only, not primary sender. |
+| Brevo | 300 emails/day, unlimited contacts | **Temporary primary sender as of 2026-07-10** (MailerLite suspended, see above) — but FrontDeskAI-only. The account's only configured sender identity is registered as "SableAssent Coin Corporation" <OurFrontDeskai@gmail.com>; never send FrontDeskAI content under that display name — always override the sender `name` per-campaign to "Daryl Speaks \| FrontDesk AI" (same verified email, no re-verification needed). Never send SableAssent/crypto content through this account — mixing brands on one sender is what got MailerLite suspended. Revert to backup/transactional-only once MailerLite is restored. |
 | HubSpot | Free CRM; "marketing contacts" enrolled in marketing sends are capped | Use purely as CRM/analytics, not for sending marketing email. |
 | Canva | 1 basic Brand Kit, limited premium elements on free plan | Build with free-tier assets only. |
 | Gmail / Google Calendar / Google Drive | Standard free Google account limits | Generous at current volume, low risk. |
