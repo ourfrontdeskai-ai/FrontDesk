@@ -54,3 +54,13 @@ Specialized subagents live in `.claude/agents/` for delegating domain-specific
 work within a session (lead sourcing, CRM ops, content drafting, reporting).
 They do not run unattended on their own — a session or Routine invokes them.
 See each file's frontmatter for scope and tool access.
+
+## HubSpot / MailerLite split (decided 2026-07-10)
+HubSpot (1,107+ contacts) is the system-of-record CRM and stays there —
+**do not bulk-migrate its contacts into MailerLite.** MailerLite's free tier
+caps around ~1,000 subscribers total, and HubSpot's contact count alone is
+already close to that ceiling. Only new, purpose-built lists (e.g. the
+"Investors & Sponsors" group, "Cold Outreach Leads") get imported into
+MailerLite directly from their source, not copied wholesale from HubSpot.
+If this changes, it needs an explicit new decision from the user, not an
+assumption carried over from an old task.
