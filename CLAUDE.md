@@ -32,8 +32,10 @@ and gives explicit approval to upgrade a specific tool.
 ## Weekly execution report
 Every week, produce a report covering everything executed that week across
 the automation system: leads sourced, CRM changes, campaigns/content drafted,
-Calendly bookings, PR/dev activity, KPI snapshot vs. targets, and any
-free-tier or blocker flags raised. The finished report must be saved to
+Calendly bookings, PR/dev activity, KPI snapshot vs. targets, email campaign
+analytics (sent/delivered/bounces/opens/clicks/unsubscribes/complaints per
+Brevo campaign, plus MailerLite account status), and any free-tier or
+blocker flags raised. The finished report must be saved to
 Google Drive as a native Google Doc (via the Google Drive connector, not just
 posted in-conversation), then the user is notified that it's ready for
 checking. This is delivered via the "Weekly Automation Report" Routine
