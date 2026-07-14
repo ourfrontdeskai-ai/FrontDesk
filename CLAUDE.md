@@ -10,7 +10,7 @@ Known free-tier ceilings to respect:
 
 | Tool | Free-tier limit | Notes |
 |---|---|---|
-| MailerLite | ~1,000 subscribers / ~12,000 emails per month | **Suspended 2026-07-10** — account flagged "not active," scheduling disabled, after a crypto-related campaign (unrelated "SableAssent Coin Corporation" content) was sent from this account. Do not attempt to send anything from this account until the user confirms it's reinstated with MailerLite support. Pace list growth into "Cold Outreach Leads" group accordingly once restored. |
+| MailerLite | ~1,000 subscribers / ~12,000 emails per month | **Suspended 2026-07-10**, still unresolved. Per user decision (2026-07-14), stop surfacing this as an active blocker in reports/updates — the leftover SableAssent draft campaign has been deleted, and the business has pivoted to Apollo + Brevo for active lead-gen/outreach in the meantime (see "Active lead-gen focus" below). Only revisit MailerLite once the user reports it's reinstated. |
 | Calendly | 1 active event type, no group-kind events | Group event types (e.g. phone-call "Free 30 min Demo") fail to activate on free plan — use solo-type events only until upgraded. |
 | Apollo.io | ~80 lead credits / ~160 direct-dial / ~5,000 AI credits / 0 export credits per cycle | Avoid bulk pulls and CSV exports (export credits are at zero). |
 | Brevo | 300 emails/day, unlimited contacts | **Temporary primary sender as of 2026-07-10** (MailerLite suspended, see above) — but FrontDeskAI-only. The account's only configured sender identity is registered as "SableAssent Coin Corporation" <OurFrontDeskai@gmail.com>; never send FrontDeskAI content under that display name — always override the sender `name` per-campaign to "Daryl Speaks \| FrontDesk AI" (same verified email, no re-verification needed). Never send SableAssent/crypto content through this account — mixing brands on one sender is what got MailerLite suspended. Revert to backup/transactional-only once MailerLite is restored. |
@@ -69,6 +69,16 @@ Specialized subagents live in `.claude/agents/` for delegating domain-specific
 work within a session (lead sourcing, CRM ops, content drafting, reporting).
 They do not run unattended on their own — a session or Routine invokes them.
 See each file's frontmatter for scope and tool access.
+
+## Active lead-gen focus (decided 2026-07-14)
+With MailerLite suspension unresolved, the priority shifted to actively finding
+and reaching clients using the tools that already work: **Apollo.io** for
+sourcing/enriching leads matching the ICP (local service businesses — salons,
+clinics, and similar — evaluating the $97/$299/$549 plans), logged into
+HubSpot; and **Brevo** for outreach email, sent from the FrontDeskAI-only
+sender identity per the rule above. Respect Apollo's free-tier credit caps
+(no bulk exports) and Brevo's 300/day send cap. Clean cold-outreach lists
+(remove/exclude high-bounce addresses) before reusing them for a new send.
 
 ## HubSpot / MailerLite split (decided 2026-07-10)
 HubSpot (1,107+ contacts) is the system-of-record CRM and stays there —
