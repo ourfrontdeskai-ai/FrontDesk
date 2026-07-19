@@ -34,14 +34,14 @@ Every week, produce a report covering everything executed that week across
 the automation system: leads sourced, CRM changes, campaigns/content drafted,
 Calendly bookings, PR/dev activity, KPI snapshot vs. targets, email campaign
 analytics (sent/delivered/bounces/opens/clicks/unsubscribes/complaints per
-Brevo campaign, plus MailerLite account status), and any free-tier or
-blocker flags raised. The finished report must be saved to
-Google Drive as a native Google Doc (via the Google Drive connector, not just
-posted in-conversation), then the user is notified that it's ready for
-checking. This is delivered via the "Weekly Automation Report" Routine
-(self-bound, fires into the originating session). If asked to change cadence
-or delivery method, update that Routine rather than relying on memory of
-this instruction alone.
+Brevo campaign, plus MailerLite account status), a rollup of that week's 5
+Daily Execution Routine logs (see below), and any free-tier or blocker flags
+raised. The finished report must be saved to Google Drive as a native Google
+Doc (via the Google Drive connector, not just posted in-conversation), then
+the user is notified that it's ready for checking. This is delivered via the
+"Weekly Automation Report" Routine (self-bound, fires into the originating
+session). If asked to change cadence or delivery method, update that Routine
+rather than relying on memory of this instruction alone.
 
 ## Recurring automation Routines
 Routines exist for well-defined, low-risk, already-proven steps only — per
@@ -52,6 +52,21 @@ requiring is run as an unattended Routine. Current Routines:
 - **Daily Ops Check** — daily snapshot of Apollo credit usage, MailerLite
   subscriber count/campaign status, Calendly bookings, and HubSpot CRM
   count, flagging anything approaching a free-tier cap.
+- **Daily Execution - Monday/Tuesday/Wednesday/Thursday/Friday** (added
+  2026-07-19) — runs the department's "Daily Execution System" 50-tasks/week
+  checklist (source: Google Doc linked in that day's task, mirrored in
+  Section 10 of the execution plan). Per user decision: only the subset of
+  each day's 10 tasks with a real connected data source is actually checked
+  (outreach/campaign performance, automation status, KPI pulses); publish-
+  type tasks (educational post, case study, tutorial, weekly update) are
+  drafted only as Gmail drafts, never auto-posted; everything else (MRR,
+  churn, billing, support tickets, avatar QA, competitor intel, etc.) is
+  logged as "not automatable yet" rather than faked, since no billing/
+  support/product-analytics connector exists and no live avatars or paying
+  customers exist yet. Each day posts a brief "Daily Execution Log" entry
+  (silent-unless-notable, same tone as Daily Ops Check) that the Weekly
+  Automation Report Routine rolls up. Revisit the automatable/non-automatable
+  split as more connectors/data sources come online.
 Do not add an hourly Routine unless there is a specific, well-defined,
 low-risk task that actually needs hourly cadence — an empty recurring job
 is not automation.
