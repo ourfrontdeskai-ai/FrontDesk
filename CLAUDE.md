@@ -95,6 +95,21 @@ sender identity per the rule above. Respect Apollo's free-tier credit caps
 (no bulk exports) and Brevo's 300/day send cap. Clean cold-outreach lists
 (remove/exclude high-bounce addresses) before reusing them for a new send.
 
+## Cold-outreach Gmail drafts go to real recipients (decided 2026-07-23)
+Whenever content is drafted for the cold-outreach lead batch (educational
+posts, case studies, tutorials, or similar), draft it as real Gmail drafts
+addressed directly to the 6 active lead email addresses below — never to a
+self-addressed placeholder — then notify the user in-conversation that the
+drafts are ready for manual review/send. These are the confirmed non-bounced
+addresses from the original 7-lead outreach batch (the 7th, Integrative
+Medical Clinic of NC, bounced immediately and is excluded):
+- contact@urbanbetty.com (Urban Betty Salon)
+- info@deeprootsatxsalon.com (Deep Roots ATX Salon)
+- mail@modernsalonandspa.com (Modern Salon & Spa)
+- customercare@oasalons.com (Oa Salons)
+- feedback@stfhealth.com (Simple Traditions Family Health)
+- info@rlpmg.com (RL Property Management)
+
 ## HubSpot / MailerLite split (decided 2026-07-10)
 HubSpot (1,107+ contacts) is the system-of-record CRM and stays there —
 **do not bulk-migrate its contacts into MailerLite.** MailerLite's free tier
