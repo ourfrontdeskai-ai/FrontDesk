@@ -10,7 +10,7 @@ Known free-tier ceilings to respect:
 
 | Tool | Free-tier limit | Notes |
 |---|---|---|
-| MailerLite | ~1,000 subscribers / ~12,000 emails per month | **Suspended 2026-07-10**, still unresolved. Per user decision (2026-07-14), stop surfacing this as an active blocker in reports/updates — the leftover SableAssent draft campaign has been deleted, and the business has pivoted to Apollo + Brevo for active lead-gen/outreach in the meantime (see "Active lead-gen focus" below). Only revisit MailerLite once the user reports it's reinstated. |
+| MailerLite | ~1,000 subscribers / ~12,000 emails per month | **Suspended 2026-07-10**, still unresolved. Per user decision (2026-07-14), stop surfacing this as an active blocker in reports/updates — the leftover SableAssent draft campaign has been deleted, and the business has pivoted to Apollo + Brevo for active lead-gen/outreach in the meantime (see "Active lead-gen focus" below). Per further user decision (2026-08-02): stop actively checking MailerLite at all in Daily Ops Check / Daily Execution Routines while suspended — do not chase reconnecting the connector or flag its auth status; just skip the MailerLite portion silently and continue with the rest of the routine. Only revisit MailerLite (checking status or re-authorizing) once the user reports it's reinstated. |
 | Calendly | 1 active event type, no group-kind events | Group event types (e.g. phone-call "Free 30 min Demo") fail to activate on free plan — use solo-type events only until upgraded. |
 | Apollo.io | ~80 lead credits / ~160 direct-dial / ~5,000 AI credits / 0 export credits per cycle | Avoid bulk pulls and CSV exports (export credits are at zero). |
 | Brevo | 300 emails/day, unlimited contacts | **Temporary primary sender as of 2026-07-10** (MailerLite suspended, see above) — but FrontDeskAI-only. The account's only configured sender identity is registered as "SableAssent Coin Corporation" <OurFrontDeskai@gmail.com>; never send FrontDeskAI content under that display name — always override the sender `name` per-campaign to "Daryl Speaks \| FrontDesk AI" (same verified email, no re-verification needed). Never send SableAssent/crypto content through this account — mixing brands on one sender is what got MailerLite suspended. Revert to backup/transactional-only once MailerLite is restored. |
@@ -43,15 +43,24 @@ the user is notified that it's ready for checking. This is delivered via the
 session). If asked to change cadence or delivery method, update that Routine
 rather than relying on memory of this instruction alone.
 
+**Agent fallback (decided 2026-08-02):** the data-gathering step normally
+delegates to the `weekly-reporting-agent` subagent. If that agent doesn't
+return in a reasonable time (it appears stuck/lost, not just slow), do not
+keep waiting indefinitely — either relaunch a fresh instance of the agent, or
+just compile the report directly from data already gathered in the session
+(daily ops checks, daily execution logs, direct tool calls) rather than
+leaving the user without a report. Note in the report itself when this
+fallback was used.
+
 ## Recurring automation Routines
 Routines exist for well-defined, low-risk, already-proven steps only — per
 the "automation execution model" rule, nothing client-facing or judgment-
 requiring is run as an unattended Routine. Current Routines:
 - **Weekly Automation Report** — weekly summary per above, saved to Google
   Drive as a Google Doc, user notified when ready.
-- **Daily Ops Check** — daily snapshot of Apollo credit usage, MailerLite
-  subscriber count/campaign status, Calendly bookings, and HubSpot CRM
-  count, flagging anything approaching a free-tier cap.
+- **Daily Ops Check** — daily snapshot of Apollo credit usage, Calendly
+  bookings, and HubSpot CRM count, flagging anything approaching a free-tier
+  cap. MailerLite is skipped while suspended (see free-tier ceilings table).
 - **Daily Execution - Monday/Tuesday/Wednesday/Thursday/Friday** (added
   2026-07-19) — runs the department's "Daily Execution System" 50-tasks/week
   checklist (source: Google Doc linked in that day's task, mirrored in
