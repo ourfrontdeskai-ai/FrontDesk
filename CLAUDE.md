@@ -80,6 +80,21 @@ Do not add an hourly Routine unless there is a specific, well-defined,
 low-risk task that actually needs hourly cadence — an empty recurring job
 is not automation.
 
+**Weekly usage limit — resume, don't skip (decided 2026-08-03):** all of the
+above Routines (Weekly Automation Report, Daily Ops Check, and each Daily
+Execution weekday) must keep firing on their normal schedules. If a firing
+hits the session's weekly usage limit (the tool-level cap that returns
+"You've hit your weekly limit," distinct from any tool's free-tier cap),
+that day's checklist is NOT to be logged as "not automatable" or silently
+dropped — it is incomplete/blocked, and must be picked back up and finished
+as soon as the usage limit resets, before or alongside whatever Routine
+fires next. E.g. if Wednesday's Daily Execution check is blocked by the
+usage limit, the moment the limit clears, go back and complete Wednesday's
+actual checklist (real checks + drafts) rather than only moving forward to
+Thursday's. Note in the relevant Daily Execution Log / Weekly Report when a
+day's items were completed late due to this, so the gap stays visible
+rather than silently backfilled as if nothing happened.
+
 **Exception (decided 2026-07-10):** the user explicitly overrode the
 "nothing client-facing unattended" default for the 7-Day LinkedIn Editorial
 Campaign — scheduled Routines may auto-post each day's LinkedIn content live,
