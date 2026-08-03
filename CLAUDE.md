@@ -104,20 +104,22 @@ sender identity per the rule above. Respect Apollo's free-tier credit caps
 (no bulk exports) and Brevo's 300/day send cap. Clean cold-outreach lists
 (remove/exclude high-bounce addresses) before reusing them for a new send.
 
-## Cold-outreach Gmail drafts go to real recipients (decided 2026-07-23)
-Whenever content is drafted for the cold-outreach lead batch (educational
-posts, case studies, tutorials, or similar), draft it as real Gmail drafts
-addressed directly to the 6 active lead email addresses below — never to a
-self-addressed placeholder — then notify the user in-conversation that the
-drafts are ready for manual review/send. These are the confirmed non-bounced
-addresses from the original 7-lead outreach batch (the 7th, Integrative
-Medical Clinic of NC, bounced immediately and is excluded):
-- contact@urbanbetty.com (Urban Betty Salon)
-- info@deeprootsatxsalon.com (Deep Roots ATX Salon)
-- mail@modernsalonandspa.com (Modern Salon & Spa)
-- customercare@oasalons.com (Oa Salons)
-- feedback@stfhealth.com (Simple Traditions Family Health)
-- info@rlpmg.com (RL Property Management)
+## Cold-outreach Gmail drafts — real-recipient rule RESCINDED (decided 2026-08-03)
+The 2026-07-23 rule below is **stopped effective immediately**, per explicit
+user instruction on 2026-08-03. Do NOT draft cold-outreach content (educational
+posts, case studies, tutorials, or similar) directly to the 6 lead email
+addresses anymore. Go back to drafting this content as self-addressed Gmail
+drafts (placeholder/self, not sent to any real lead) for the user's own
+review, exactly like every other Daily Execution draft-only item. If the user
+wants real-recipient drafts resumed at some point, that requires a fresh
+explicit instruction — do not infer it from context or from old session
+history.
+
+~~Superseded rule (was in effect 2026-07-23 through 2026-08-02):~~ content was
+drafted as real Gmail drafts addressed directly to: contact@urbanbetty.com,
+info@deeprootsatxsalon.com, mail@modernsalonandspa.com, customercare@oasalons.com,
+feedback@stfhealth.com, info@rlpmg.com. This is kept here only as a historical
+record — do not act on it.
 
 ## HubSpot / MailerLite split (decided 2026-07-10)
 HubSpot (1,107+ contacts) is the system-of-record CRM and stays there —
