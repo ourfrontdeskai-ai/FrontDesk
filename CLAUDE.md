@@ -80,6 +80,14 @@ Do not add an hourly Routine unless there is a specific, well-defined,
 low-risk task that actually needs hourly cadence — an empty recurring job
 is not automation.
 
+**Educational post drafting paused (decided 2026-08-17):** Monday's Daily
+Execution item 10 ("publish one educational post") is stopped until further
+notice per explicit user instruction. Do not draft an educational post on
+Mondays — log the item as skipped per this decision rather than drafting
+one. The case study (Wednesday), tutorial (Thursday), and weekly update
+(Friday) drafts are unaffected and continue as normal. Resume educational
+posts only when the user explicitly says to.
+
 **Weekly usage limit — resume, don't skip (decided 2026-08-03):** all of the
 above Routines (Weekly Automation Report, Daily Ops Check, and each Daily
 Execution weekday) must keep firing on their normal schedules. If a firing
